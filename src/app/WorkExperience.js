@@ -1,13 +1,12 @@
 // page.js
 import React from 'react';
 import Popup from './popup'; 
-import AurigoPopup from '@/AurigoPopup';
 import Image from "next/image";
 import Head from "next/head";
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from "react-icons/ai";
 import { FaPhone } from 'react-icons/fa';
 import jeevan from "../../public/Jeevan_2.png";
-import { DiDotnet, DiJava, DiJsBadge, DiPython, DiJqueryLogo, DiMysql, DiMsqlServer, DiReact, DiRedis, DiAws, DiMongodb,DiNodejs, DiGithub, DiGit, DiSass, DiHtml5, DiCss3, DiVisualstudio, DiJavascript, DiJqueryUiLogo } from "react-icons/di";
+import { DiDotnet, DiJava, DiJsBadge, DiPython, DiJqueryLogo, DiMysql, DiMsqlServer, DiReact, DiRedis, DiAws, DiMongodb, DiNodejs, DiGithub, DiGit, DiSass, DiHtml5, DiCss3, DiVisualstudio } from "react-icons/di";
 import Icon from '@mdi/react';
 import { mdiApacheKafka } from '@mdi/js';
 
@@ -39,7 +38,9 @@ export default function Home() {
                 <a href="https://github.com/jeevandsouza" style={{ padding: '0.5rem' }}>
                   <AiOutlineGithub />
                 </a>
-                <a href="https://drive.google.com/file/d/1h0LJgabkb_pmwdp3LTNyMTpdtSezePYM/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md text-base">Resume</a>
+                <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md text-base" href="#">
+                  Resume
+                </a>
               </div>
               <p className="text-md py-5 leading-8 font-burtons text-gray-800">
                 I have a master's degree in Computer Science and nearly 3 years of software development work experience. I have worked at a high growth startup and have experience
@@ -135,8 +136,7 @@ export default function Home() {
                     <a href="https://brightmindenrichment.org/" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">Brightmind Enrichment</a>
                     <span className="block">Software Developer</span>
                     <span className="block">Feb 2024 - Present</span>
-                    <Popup className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2"/>
-                    
+                    <button id="showModalBrightmind" className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-2">Show Roles and Responsibilities</button>
 
                   </div>
                 </div>
@@ -145,123 +145,11 @@ export default function Home() {
                     <a href="https://www.aurigo.com/company/" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">Aurigo Software</a>
                     <span className="block">Software Engineer</span>
                     <span className="block">Jan 2019 - Apr 2021</span>
-                    <AurigoPopup/>
+                    <Popup />
 
                     
 
                   </div>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl py-2 text-teal-600 font-medium">Education</h1>
-                <div className='flex flex-wrap justify-center items-center'>
-                <div className="border border-red-800 p-4 mb-4 rounded-lg">
-                    <a href="https://www.utdallas.edu/" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">University Of Texas at Dallas</a>
-                    <span className="block">Master's in Computer Science</span>
-                    <span className="block">Jan 2022 - Dec 2023</span>
-                    
-
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl py-2 text-teal-600 font-medium">Projects</h1>
-                <div className='flex flex-wrap'>
-                <div className="border border-red-800 mr-8 p-4 mb-4 rounded-lg">
-                    <a href="https://github.com/jeevandsouza/JD_URL_shortener" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">Custom URL Shortener</a>
-                    <div className="text-teal-600 font-small">Technologies Used  </div>
-                    <div className="flex">
-                    <div className="flex items-center flex-col px-1">
-                      <DiNodejs size={45} />
-                      <span>Nodejs</span>
-                   
-                  </div>
-                  <div className="flex items-center flex-col px-2">
-    <DiMongodb size={45} />
-    <span>MongoDB</span>
-    </div>
-
-    </div>
-
-      
-                  </div>
-                  <div className='flex flex-wrap mr-4'>
-                <div className="border border-red-800 mr-8 p-4 mb-4 rounded-lg">
-                    <a href="https://github.com/jeevandsouza/Github_Profiler" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">Github Profiler</a>
-                    <div className="text-teal-600 font-small">Technologies Used  </div>
-                    <div className="flex">
-                    <div className="flex items-center flex-col px-1">
-                      <DiJavascript size={45} />
-                      <span>Javascript</span>
-                   
-                  </div>
-                  <div className="flex items-center flex-col px-2">
-    <DiJqueryUiLogo size={45} />
-    <span>Jquery</span>
-    </div>
-    <div className="flex items-center flex-col px-2">
-    <DiGithub size={45} />
-    <span>Github Auth</span>
-    </div>
-    <div className="flex items-center flex-col px-2">
-    <DiAws size={45} />
-    <span>AWS</span>
-    </div>
-
-    </div>
-
-      </div>
-      <div className='flex flex-wrap'>
-                <div className="border border-red-800 mr-8 p-4 mb-4 rounded-lg">
-                    <a href="https://github.com/jeevandsouza/JD-Expense-Tracker" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">Expense Tracker</a>
-                    <div className="text-teal-600 font-small">Technologies Used  </div>
-                    <div className="flex">
-                    <div className="flex items-center flex-col px-1">
-                      <DiDotnet size={45} />
-                      <span>.Net(C#)</span>
-                   
-                  </div>
-                  <div className="flex items-center flex-col px-2">
-    <DiMsqlServer size={45} />
-    <span>SQL Server</span>
-    </div>
-    <div className="flex items-center flex-col px-2">
-    <DiJavascript size={45} />
-    <span>Javascript</span>
-    </div>
-    
-
-    </div>
-
-      
-                  </div>
-                  </div>
-                  <div className='flex flex-wrap'>
-                <div className="border border-red-800 p-4 mb-4 rounded-lg">
-                    <a href="https://github.com/jeevandsouza/" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-blue-600 hover:underline">Tutorasium System Design</a>
-                    <div className="text-teal-600 font-small">Technologies Used  </div>
-                    <div className="flex">
-                    <div className="flex items-center flex-col px-1">
-                      <DiJava size={45} />
-                      <span>Java</span>
-                   
-                  </div>
-                  <div className="flex items-center flex-col px-2">
-    <DiMysql size={45} />
-    <span> My SQL</span>
-    </div>
-    <div className="flex items-center flex-col px-2">
-    <DiReact size={45} />
-    <span>React</span>
-    </div>
-
-    </div>
-
-      
-                  </div>
-                  </div>
-                  </div>
-                
                 </div>
               </div>
             </div>
